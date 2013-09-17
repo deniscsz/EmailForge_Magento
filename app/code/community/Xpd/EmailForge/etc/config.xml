@@ -11,5 +11,27 @@
         <class>Xpd_EmailForge_Helper</class>
       </emailforge>
     </helpers>
+    <events>
+	  <subscriber_emailforge_customer>
+        <observers>
+          <Xpd_EmailForge_Model_Observer>
+            <type>model</type>
+            <class>emailforge/observer</class>
+            <method>getSubscribeCustomer</method>
+            <args></args>
+          </Xpd_EmailForge_Model_Observer>
+        </observers>
+      </subscriber_emailforge_customer>
+      <subscriber_emailforge_generic>
+        <observers>
+          <Xpd_EmailForge_Model_Observer>
+            <type>model</type>
+            <class>emailforge/observer</class>
+            <method>getSubscribers</method>
+            <args></args>
+          </Xpd_EmailForge_Model_Observer>
+        </observers>
+      </subscriber_emailforge_generic>
+    </events>
   </global>
 </config> 
