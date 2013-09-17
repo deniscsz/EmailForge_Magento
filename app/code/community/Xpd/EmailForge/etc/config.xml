@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Xpd_EmailForge>
+      <version>1.0.0</version>
+    </Xpd_EmailForge>
+  </modules>
+  <global>
+    <helpers>
+      <emailforge>
+        <class>Xpd_EmailForge_Helper</class>
+      </emailforge>
+    </helpers>
+  </global>
+</config> 
