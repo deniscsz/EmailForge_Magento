@@ -3,7 +3,8 @@
 class Xpd_EmailForge_SplioController extends Mage_Core_Controller_Front_Action 
 {
 
-	protected function _getModule() {
+    protected function _getModule()
+    {
         return Mage::getSingleton('emailforge/splio');
     }
     
@@ -13,7 +14,7 @@ class Xpd_EmailForge_SplioController extends Mage_Core_Controller_Front_Action
         {
             $universe = Mage::getStoreConfig('emailforge/config/universe');
             $pass = Mage::getStoreConfig('emailforge/config/token');
-            $list = Mage::getStoreConfig('emailforge/config/list');
+            $list = Mage::getStoreConfig('emailforge/config/listcontroller');
             $resource = 'contact';
             
             $actives_fields = explode(",",Mage::getStoreConfig('emailforge/config/fields'));
@@ -89,11 +90,11 @@ class Xpd_EmailForge_SplioController extends Mage_Core_Controller_Front_Action
             }
             
             $curlAdapter = new Varien_Http_Adapter_Curl();
-    		$curlAdapter->setConfig(array('timeout'   => 20));
-    		$curlAdapter->write(Zend_Http_Client::POST, $url, '1.0', array('Content-Type: application/json','Content-Length: ' . strlen(json_encode($fields))), json_encode($fields));
-    		$resposta = $curlAdapter->read();
-    		$retorno = substr($resposta,strpos($resposta, "\r\n\r\n"));
-    		$curlAdapter->close();
+            $curlAdapter->setConfig(array('timeout'   => 20));
+            $curlAdapter->write(Zend_Http_Client::POST, $url, '1.0', array('Content-Type: application/json','Content-Length: ' . strlen(json_encode($fields))), json_encode($fields));
+            $resposta = $curlAdapter->read();
+            $retorno = substr($resposta,strpos($resposta, "\r\n\r\n"));
+            $curlAdapter->close();
             
             $return = json_decode($retorno);
             
@@ -106,7 +107,7 @@ class Xpd_EmailForge_SplioController extends Mage_Core_Controller_Front_Action
                 echo 1;
             }
             
-            Mage::log('EmailForge Splio: '.$return->{"code"}.' - '.$return->{"description"}.' ('.$fields['email'].')');
+            Mage::log('EmailForge Splio via Controller: '.$return->{"code"}.' - '.$return->{"description"}.' ('.$fields['email'].')');
         }
     }
 }

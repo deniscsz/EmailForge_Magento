@@ -23,6 +23,16 @@
     </blocks>
   </global>
   <frontend>
+    <events>
+      <newsletter_subscriber_save_commit_after>
+        <observers>
+            <xpd_emailforge_model_observer>
+                <class>Xpd_EmailForge_Model_Observer</class>
+                <method>subscribedToNewsletter</method>
+            </xpd_emailforge_model_observer>
+        </observers>
+      </newsletter_subscriber_save_commit_after>
+    </events>
     <translate>
         <modules>
             <Xpd_EmailForge>

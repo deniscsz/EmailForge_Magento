@@ -35,13 +35,13 @@
 							<comment>Ativa a extensão</comment>
                           </enable>
                           <universe translate="label">
-                            <label>Universe</label>
+                            <label>Universo</label>
 							<frontend_type>text</frontend_type>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-							<comment>Splio's universe</comment>
+							<comment>Universo na Splio</comment>
                           </universe>
                           <token translate="label">
                             <label>API Key</label>
@@ -53,14 +53,23 @@
 							<comment>API Key da Splio</comment>
                           </token>
                           <list translate="label">
-                            <label>Lista</label>
+                            <label>Listas</label>
 							<frontend_type>text</frontend_type>
-                            <sort_order>20</sort_order>
+                            <sort_order>35</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-							<comment>Lista que os contatos serão adicionados no EmailForge. Utilize vírgula para separar as listas (no caso de mais de uma) e não utilize espaços entre os nomes das listas.</comment>
+							<comment>Listas que os contatos serão adicionados no EmailForge. Utilize vírgula para separar as listas (no caso de mais de uma) e não utilize espaços entre os nomes das listas.</comment>
                           </list>
+                          <listcontroller translate="label">
+                            <label>Listas para Forms personalizados</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Listas que os contatos serão adicionados no EmailForge através do Controller (forms personalizados). Utilize vírgula para separar as listas (no caso de mais de uma) e não utilize espaços entre os nomes das listas. Caso você não utilize forms com AJAX, se preocupe com esse campo.</comment>
+                          </listcontroller>
                           <fields>
                             <label>Campos de Segmentação</label>
                             <frontend_type>multiselect</frontend_type>
