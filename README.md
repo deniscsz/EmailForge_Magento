@@ -19,7 +19,7 @@ Observações
 
 - A URL que seu formulário personalizado deve fazer o POST com o email e listas de emails (devem existir previamente no EmailForge) é "http://<MagentoBaseUrl>/emailforge/splio/contact". Você pode utilizar qualquer formulário dentro do seu domínio para cadastrar email em suas bases desde que o destino do post esteja correto.
 
-Veja um exemplo:
+Veja um exemplo utilizando jQuery:
 
     var email_value = "teste@mail.com.br";
     jQuery.post("http://meusite.com.br/emailforge/splio/contact",{email:email_value,lists:"MyListEmail"},function(result) {
